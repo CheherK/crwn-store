@@ -10,10 +10,13 @@
     width: 70px;
     padding: 25px;
   }
+  nav {
+    height: 100%;
+    padding-right: 25px;
+  }
 
   ul {
     list-style-type: none;
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;

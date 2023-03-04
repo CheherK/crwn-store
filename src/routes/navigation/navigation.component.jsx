@@ -22,7 +22,11 @@ const Navigation = () =>
                         Shop
                      </Link>
                   </li>
-                  <li>Contact</li>
+                  <li>
+                     <Link to='sign-in'>
+                        Sign In
+                     </Link>
+                  </li>
                </ul>
             </nav>
          </header>
