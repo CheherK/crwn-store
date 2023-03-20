@@ -23,7 +23,7 @@ const Navigation = () =>
                      </Link>
                   </li>
                   <li>
-                     <Link to='sign-in'>
+                     <Link to='auth'>
                         Sign In
                      </Link>
                   </li>
