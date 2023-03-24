@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
 import './sign-in-form.styles.scss';
@@ -16,9 +16,7 @@ const SignInForm = () => {
    const submitHandler = async (event) => {
       event.preventDefault();
       try {
-         const res = await signInUserWithEmailAndPassword(email, password);
-         console.log(res);
-         return res;
+         await signInUserWithEmailAndPassword(email, password);
       } catch (error) {
          if(error.code === "auth/wrong-password") {
             
@@ -41,8 +39,7 @@ const SignInForm = () => {
    };
 
    const signInWithGoogle = async () => {
-      const { user } = await signInWithGooglePopup();
-      await createUserDocumentFromAuth(user);
+      await signInWithGooglePopup();
    };
    return (
       <section className='sign-in-form'>
