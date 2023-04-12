@@ -1,11 +1,12 @@
-import { useContext } from "react";
-import { CartContext } from "../../contexts/cart.context";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCartItems } from "../../store/cart/cart.selector";
+import { removeCartItem, addItemToCart, decrementCartItem } from "../../store/cart/cart.action";
 import "./checkout-item.styles.scss";
 
 const CheckoutItem = ({ cartItem }) => {
    const { name, imageUrl, quantity, price } = cartItem;
-   const { decrementItemFromCart, removeItemFromCart, addItemToCart } = useContext(CartContext);
-
+   const cartItems = useSelector(selectCartItems);
+   const dispatch = useDispatch();
 
    /*
       When you pass removeItemFromCart(cartItem) directly to the onClick handler, 
@@ -22,10 +23,9 @@ const CheckoutItem = ({ cartItem }) => {
       The function is executed immediately when the component is rendered, and the result of the function (which is probably undefined) is passed as the onClick handler. This means that every time the component is rendered, the function is executed again, causing an infinite loop.
    */
 
-
-   const decrementHandler = () => decrementItemFromCart(cartItem);
-   const incrementHandler = () => addItemToCart(cartItem);
-   const removeHandler = () => removeItemFromCart(cartItem);
+   const decrementHandler = () => dispatch(decrementCartItem(cartItems, cartItem));
+   const incrementHandler = () => dispatch(addItemToCart(cartItems, cartItem));
+   const removeHandler = () => dispatch(removeCartItem(cartItems, cartItem));
    return (
       <div className='checkout-item-container'>
          <div className='image-container'>
