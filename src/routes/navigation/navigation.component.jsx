@@ -3,7 +3,7 @@ import { Fragment } from "react";
 // import { CartContext } from "../../contexts/cart.context";
 import { useSelector } from "react-redux";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
-import { ReactComponent as CrwnLogo } from '../../assests/crown-logo.svg';
+import { ReactComponent as CrwnLogo } from '../../assets/crown-logo.svg';
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import { selectCurrentUser } from "../../store/user/user.selector";
