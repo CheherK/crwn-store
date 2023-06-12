@@ -6,6 +6,7 @@ import "./checkout.styles.scss";
 const Checkout = () => {
    const cartItems = useSelector(selectCartItems);
    const cartTotal = useSelector(selectCartTotal);
+   //[]
    return (
       <div className="checkout-container">
          <header>
@@ -15,6 +16,7 @@ const Checkout = () => {
             <span>Price</span>
             <span>remove</span>
          </header>
+         
          {cartItems.map((item) => <CheckoutItem key={item.id} cartItem={item} />)}
          <span className="total">Total: {cartTotal} $</span>
       </div>
