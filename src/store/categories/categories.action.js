@@ -1,3 +1,11 @@
+
+
+
+//we no more use this file since we migrate to redux toolkit
+
+
+
+
 import { CATEGORIES_ACTION_TYPES } from './categories.types';
 import { createAction } from '../../utils/reducer/reducer.utils';
 

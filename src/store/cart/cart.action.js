@@ -1,3 +1,9 @@
+
+
+
+//we no longer use this file of actions since we migrate to redux toolkit
+
+
 import { createAction } from "../../utils/reducer/reducer.utils";
 import { CART_ACTION_TYPES } from "./cart.types";
 

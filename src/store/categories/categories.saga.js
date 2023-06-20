@@ -1,3 +1,12 @@
+
+
+
+
+//we no more use this file
+
+
+
+
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 import { getCategoriesAndDocuments } from '../../utils/firebase/firebase.utils';
