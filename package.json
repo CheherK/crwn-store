@@ -4,10 +4,14 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@stripe/react-stripe-js": "^2.1.1",
+    "@stripe/stripe-js": "^1.54.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.3.1",
     "firebase": "^9.17.1",
+    "netlify-lambda": "^2.0.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -19,6 +23,7 @@
     "redux-saga": "^1.2.3",
     "reselect": "^4.1.7",
     "sass": "^1.58.0",
+    "stripe": "^12.9.0",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },
